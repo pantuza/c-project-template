@@ -1,7 +1,7 @@
 /*
  * ============================================================================
  *
- *       Filename:  wait_port.c
+ *       Filename:  main.c
  *
  *    Description:  Main file of the project
  *
