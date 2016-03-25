@@ -34,3 +34,7 @@
 # Project binary files
 /bin/*
 !/bin/.gitkeep
+
+# Project object files
+/lib/*
+!/lib/.gitkeep
