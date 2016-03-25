@@ -30,3 +30,7 @@
 
 # Debug files
 *.dSYM/
+
+# Project binary files
+/bin/*
+!/bin/.gitkeep
