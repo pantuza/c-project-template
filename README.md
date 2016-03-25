@@ -1,7 +1,7 @@
 # C project template
 
 A C project template with configure, Makefile, command line options parsing
-and unittest using cmocka.
+and unittest using [cmocka](https://cmocka.org/).
 
 
 ### What is included
