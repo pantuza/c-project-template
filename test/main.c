@@ -28,6 +28,11 @@
 
 /* A test case that does nothing and succeeds. */
 static void null_test_success(void **state) {
+
+    /**
+     * If you want to know how to use cmocka, please refer to:
+     * https://api.cmocka.org/group__cmocka__asserts.html
+     */
     (void) state; /* unused */
 }
 
