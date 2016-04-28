@@ -21,6 +21,7 @@ BINDIR := bin
 SRCDIR := src
 LOGDIR := log
 LIBDIR := lib
+TESTDIR := test
 
 
 # Source code file extension
@@ -49,11 +50,19 @@ DEBUG := -g3 -DDEBUG=1
 # Dependency libraries
 LIBS := -lm # -I some/path/to/library
 
+# Test libraries
+TEST_LIBS := -l cmocka
+
 
 #
 # The binary file name
 #
 BINARY := binary
+
+
+# Tests binary file
+TEST_BINARY := $(BINARY)_test_runner
+
 
 
 # %.o file names
@@ -70,7 +79,7 @@ OBJECTS :=$(patsubst %,$(LIBDIR)/%.o,$(NAMES))
 # Rule for link and generate the binary file
 all: $(OBJECTS)
 	@echo -en "$(BROWN)LD $(END_COLOR)";
-	$(CC) -o $(BINDIR)/$(BINARY) $+ $(DEBUG) $(CFLAGS) $(LIBS) 
+	$(CC) -o $(BINDIR)/$(BINARY) $+ $(DEBUG) $(CFLAGS) $(LIBS)
 	@echo -en "\n--\nBinary file placed at" \
 			  "$(BROWN)$(BINDIR)/$(BINARY)$(END_COLOR)\n";
 
@@ -78,7 +87,7 @@ all: $(OBJECTS)
 # Rule for object binaries compilation
 $(LIBDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@echo -en "$(BROWN)CC $(END_COLOR)";
-	$(CC) -c $^ -o $@ $(DEBUG) $(CFLAGS) $(LIBS) 
+	$(CC) -c $^ -o $@ $(DEBUG) $(CFLAGS) $(LIBS)
 
 
 # Rule for run valgrind tool
@@ -90,6 +99,14 @@ valgrind:
 		--log-file=$(LOGDIR)/$@.log \
 		$(BINDIR)/$(BINARY)
 	@echo -e "\nCheck the log file: $(LOGDIR)/$@.log\n"
+
+
+# Compile tests and run the test binary
+tests:
+	@echo -en "$(BROWN)CC $(END_COLOR)";
+	$(CC) $(TESTDIR)/main.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
+	@echo -e "$(BROWN) Running tests: $(END_COLOR)";
+	./$(BINDIR)/$(TEST_BINARY)
 
 
 # Rule for cleaning the project
