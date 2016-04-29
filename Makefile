@@ -105,7 +105,7 @@ valgrind:
 tests:
 	@echo -en "$(BROWN)CC $(END_COLOR)";
 	$(CC) $(TESTDIR)/main.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
-	@ldconfig -C /tmp/ld.so.cache # caching the library linking
+	@which ldconfig && ldconfig -C /tmp/ld.so.cache || true # caching the library linking
 	@echo -e "$(BROWN) Running tests: $(END_COLOR)";
 	./$(BINDIR)/$(TEST_BINARY)
 
