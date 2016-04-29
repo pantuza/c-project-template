@@ -51,7 +51,7 @@ DEBUG := -g3 -DDEBUG=1
 LIBS := -lm # -I some/path/to/library
 
 # Test libraries
-TEST_LIBS := -l cmocka
+TEST_LIBS := -l cmocka -L /usr/lib
 
 
 #
@@ -105,6 +105,7 @@ valgrind:
 tests:
 	@echo -en "$(BROWN)CC $(END_COLOR)";
 	$(CC) $(TESTDIR)/main.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
+	@/sbin/ldconfig -C /tmp/ld.so.cache # caching the library linking
 	@echo -e "$(BROWN) Running tests: $(END_COLOR)";
 	./$(BINDIR)/$(TEST_BINARY)
 
