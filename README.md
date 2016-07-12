@@ -23,6 +23,38 @@ using [cmocka](https://cmocka.org/).
 * **clean** - Clean the project by removing generated files
 * **valgrind** - Run valgrind tool to find memory leaks and buffer overflows
 
+
+### How to start
+
+First, you have to clone this project and check if all dependencies are ok.
+To verify that, you should compile, run and test the project without any
+modifications:
+
+#### Compiling the project
+
+```bash
+$> make
+```
+You will see compilation log output and them the following message:
+> Binary file placed at bin/binary
+
+#### Running binary file
+
+```bash
+$> ./bin/binary
+```
+You should see the command line options printed as a debugging message.
+
+#### Testing project
+
+```bash
+$> make tests
+```
+You will see compilation output and the tests running results.
+
+> 'make tests' compile the project using cmocka. The binary output will be:
+> bin/binary_test_runner. Then it runs the tests binary
+
 #### Author
 
 Gustavo Pantuza <gustavopantuza@gmail.com>
