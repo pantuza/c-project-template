@@ -37,7 +37,7 @@ static void null_test_success(void **state) {
 }
 
 
-/*
+/**
  * Test runner function
  */
 int
