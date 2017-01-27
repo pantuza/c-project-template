@@ -2,8 +2,7 @@
 
 A C project template with configure, Makefile, command line options parsing,
 colors for pretty printing, valgrind analysis and unittest
-using [cmocka](https://cmocka.org/).
-
+using [cmocka](https://cmocka.org/). For detailed informations, check out the [Wiki](https://github.com/pantuza/c-project-template/wiki)
 
 ### What is included
 
