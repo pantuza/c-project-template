@@ -75,6 +75,18 @@ OBJECTS :=$(patsubst %,$(LIBDIR)/%.o,$(NAMES))
 # COMPILATION RULES
 #
 
+default: all
+
+# Help message
+help:
+	@echo "C Project Template"
+	@echo
+	@echo "Target rules:"
+	@echo "    all      - Compiles and generates binary file"
+	@echo "    tests    - Compiles with cmocka and run tests binary file"
+	@echo "    start    - Starts a new project using C project template"
+	@echo "    valgrind - Runs binary file using valgrind tool"
+	@echo "    clean    - Clean the project by removing binaries"
 
 # Rule for link and generate the binary file
 all: $(OBJECTS)
