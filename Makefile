@@ -70,6 +70,8 @@ NAMES := $(notdir $(basename $(wildcard $(SRCDIR)/*.$(SRCEXT))))
 OBJECTS :=$(patsubst %,$(LIBDIR)/%.o,$(NAMES))
 
 
+# Gets the Operating system name
+OS := $(shell uname -s)
 
 #
 # COMPILATION RULES
@@ -87,6 +89,20 @@ help:
 	@echo "    start    - Starts a new project using C project template"
 	@echo "    valgrind - Runs binary file using valgrind tool"
 	@echo "    clean    - Clean the project by removing binaries"
+	@echo "    help     - Prints a help message with target rules"
+
+# Starts a new project using C project template
+start:
+ifeq ($(PROJECT_NAME),)
+	$(error Missing project name. Try: make start PROJECT_NAME=project-name)
+endif
+	@echo "Creating project: $(PROJECT_NAME)"
+	$(eval SED_OPTS = "-i")
+ifeq ($(OS),Darwin)
+	$(eval SED_OPTS = "-i ''")
+endif
+	@sed $(SED_OPTS) 's/BINARY := gustavo/BINARY := $(PROJECT_NAME)/g' Makefile
+
 
 # Rule for link and generate the binary file
 all: $(OBJECTS)
