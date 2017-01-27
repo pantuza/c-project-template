@@ -21,6 +21,7 @@ using [cmocka](https://cmocka.org/). For detailed informations, check out the [W
 * **tests** - Compiles tests using cmocka and run the test binary
 * **clean** - Clean the project by removing generated files
 * **valgrind** - Run valgrind tool to find memory leaks and buffer overflows
+* **help** - Prints a help message with target rules
 
 
 ### How to start
