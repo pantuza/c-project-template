@@ -10,10 +10,15 @@
 #
 
 
+# Includes the project configurations
+include project.conf
+
+
 # Color definition for print purpose
 BROWN=\e[0;33m
 BLUE=\e[1;34m
 END_COLOR=\e[0m
+
 
 
 # Source code directory structure
@@ -54,11 +59,6 @@ LIBS := -lm # -I some/path/to/library
 TEST_LIBS := -l cmocka -L /usr/lib
 
 
-#
-# The binary file name
-#
-BINARY := binary
-
 
 # Tests binary file
 TEST_BINARY := $(BINARY)_test_runner
@@ -97,11 +97,6 @@ ifeq ($(PROJECT_NAME),)
 	$(error Missing project name. Try: make start PROJECT_NAME=project-name)
 endif
 	@echo "Creating project: $(PROJECT_NAME)"
-	$(eval SED_OPTS = "-i")
-ifeq ($(OS),Darwin)
-	$(eval SED_OPTS = "-i ''")
-endif
-	@sed $(SED_OPTS) 's/BINARY := binary/BINARY := $(PROJECT_NAME)/g' Makefile
 
 
 # Rule for link and generate the binary file
