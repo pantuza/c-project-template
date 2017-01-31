@@ -13,6 +13,19 @@
 # Includes the project configurations
 include project.conf
 
+#
+# Validating project variables defined in project.conf
+#
+ifndef PROJECT_NAME
+$(error Missing PROJECT_NAME. Put variables at project.conf file)
+endif
+ifndef BINARY
+$(error Missing BINARY. Put variables at project.conf file)
+endif
+ifndef PROJECT_PATH
+$(error Missing PROJECT_PATH. Put variables at project.conf file)
+endif
+
 
 # Color definition for print purpose
 BROWN=\e[0;33m
@@ -93,10 +106,11 @@ help:
 
 # Starts a new project using C project template
 start:
-ifeq ($(PROJECT_NAME),)
-	$(error Missing project name. Try: make start PROJECT_NAME=project-name)
-endif
 	@echo "Creating project: $(PROJECT_NAME)"
+	@mkdir -pv $(PROJECT_PATH)
+	@echo "Copying files from template to new directory:"
+	@cp -rvf ./* $(PROJECT_PATH)/
+	@echo "Go to $(PROJECT_PATH) and run: make test"
 
 
 # Rule for link and generate the binary file
