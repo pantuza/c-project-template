@@ -13,7 +13,7 @@ using [cmocka](https://cmocka.org/).
 ### Quick usage
 
 * Clone project
-* Change project.conf
+* Edit project.conf
 * make start
 
 Checkout the [Get started](https://github.com/pantuza/c-project-template/wiki/Get-started) and the [Documentation wiki](https://github.com/pantuza/c-project-template/wiki)
