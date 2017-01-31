@@ -101,7 +101,7 @@ endif
 ifeq ($(OS),Darwin)
 	$(eval SED_OPTS = "-i ''")
 endif
-	@sed $(SED_OPTS) 's/BINARY := gustavo/BINARY := $(PROJECT_NAME)/g' Makefile
+	@sed $(SED_OPTS) 's/BINARY := binary/BINARY := $(PROJECT_NAME)/g' Makefile
 
 
 # Rule for link and generate the binary file
