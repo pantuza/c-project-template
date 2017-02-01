@@ -30,6 +30,9 @@ endif
 # Gets the Operating system name
 OS := $(shell uname -s)
 
+# Default shell
+SHELL := bash
+
 # Color prefix for Linux distributions
 COLOR_PREFIX := e
 
