@@ -159,6 +159,4 @@ tests:
 
 # Rule for cleaning the project
 clean:
-	@rm -rvf $(BINDIR)/*;
-	@rm -rvf $(LIBDIR)/*;
-	@rm -rvf $(LOGDIR)/*;
+	@rm -rvf $(BINDIR)/* $(LIBDIR)/* $(LOGDIR)/*;
