@@ -27,10 +27,20 @@ $(error Missing PROJECT_PATH. Put variables at project.conf file)
 endif
 
 
+# Gets the Operating system name
+OS := $(shell uname -s)
+
+# Color prefix for Linux distributions
+COLOR_PREFIX := e
+
+ifeq ($(OS),Darwin)
+	COLOR_PREFIX := 033
+endif
+
 # Color definition for print purpose
-BROWN=\e[0;33m
-BLUE=\e[1;34m
-END_COLOR=\e[0m
+BROWN=\$(COLOR_PREFIX)[0;33m
+BLUE=\$(COLOR_PREFIX)[1;34m
+END_COLOR=\$(COLOR_PREFIX)[0m
 
 
 
@@ -83,9 +93,6 @@ NAMES := $(notdir $(basename $(wildcard $(SRCDIR)/*.$(SRCEXT))))
 OBJECTS :=$(patsubst %,$(LIBDIR)/%.o,$(NAMES))
 
 
-# Gets the Operating system name
-OS := $(shell uname -s)
-
 #
 # COMPILATION RULES
 #
@@ -135,7 +142,7 @@ valgrind:
 		--leak-resolution=high \
 		--log-file=$(LOGDIR)/$@.log \
 		$(BINDIR)/$(BINARY)
-	@echo -e "\nCheck the log file: $(LOGDIR)/$@.log\n"
+	@echo -en "\nCheck the log file: $(LOGDIR)/$@.log\n"
 
 
 # Compile tests and run the test binary
@@ -143,7 +150,7 @@ tests:
 	@echo -en "$(BROWN)CC $(END_COLOR)";
 	$(CC) $(TESTDIR)/main.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
 	@which ldconfig && ldconfig -C /tmp/ld.so.cache || true # caching the library linking
-	@echo -e "$(BROWN) Running tests: $(END_COLOR)";
+	@echo -en "$(BROWN) Running tests: $(END_COLOR)";
 	./$(BINDIR)/$(TEST_BINARY)
 
 
