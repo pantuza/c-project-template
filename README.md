@@ -6,7 +6,7 @@ Every C project has a lazy start by creating lots of command line parsers, Makef
 For detailed informations, check out the [Documentation wiki](https://github.com/pantuza/c-project-template/wiki)
 
 The project brings you a Makefile, command line options parsing,
-colors for pretty printing, valgrind analysis and unittest
+colors for pretty printing, valgrind report and unittest
 using [cmocka](https://cmocka.org/). 
 
 
