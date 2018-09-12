@@ -1,5 +1,7 @@
 # C project template
 
+<img src="https://raw.githubusercontent.com/pantuza/c-project-template/media/cpt-cover.png" align="center" />
+
 Every C project has a lazy start by creating lots of command line parsers, Makefiles, help and usage messages.
 **C project template** aims to take you to the solution point! The point you write the code that solves your problem.
 
