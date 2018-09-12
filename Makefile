@@ -120,7 +120,10 @@ start:
 	@mkdir -pv $(PROJECT_PATH)
 	@echo "Copying files from template to new directory:"
 	@cp -rvf ./* $(PROJECT_PATH)/
-	@echo "Go to $(PROJECT_PATH) and run: make test"
+	@echo
+	@echo "Go to $(PROJECT_PATH) and compile your project: make"
+	@echo "Then execute it: bin/$(BINARY) --help"
+	@echo "Happy hacking o/"
 
 
 # Rule for link and generate the binary file
