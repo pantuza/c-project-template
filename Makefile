@@ -163,3 +163,10 @@ tests:
 # Rule for cleaning the project
 clean:
 	@rm -rvf $(BINDIR)/* $(LIBDIR)/* $(LOGDIR)/*;
+
+# Rule for formatting the source code use clang-format
+fmt:
+	@clang-format -i \
+		-style="{BasedOnStyle: mozilla, IndentWidth: 4, ColumnLimit: 100}" \
+		$(SRCDIR)/*.h \
+		$(SRCDIR)/*.c
