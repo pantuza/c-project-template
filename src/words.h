@@ -6,7 +6,7 @@
 
 enum letterColor = {gray, green, yellow};
 
-typedef struct paintedWord {
+typedef struct paintedWord {  
     char word[WORDLEN];
     letterColor colors[WORDLEN];
 } paintedWord_t;
