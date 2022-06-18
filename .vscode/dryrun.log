@@ -1,0 +1,15 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/asabs18/projects/wordleSolver'
+echo -en "\e[0;33mCC \e[0m";
+gcc -c src/main.c -o lib/main.o -g3 -DDEBUG=1 -O3 -std=gnu99  -fstack-protector-all -Wstack-protector -Wall -Wextra -pedantic   
+echo -en "\e[0;33mCC \e[0m";
+gcc -c src/messages.c -o lib/messages.o -g3 -DDEBUG=1 -O3 -std=gnu99  -fstack-protector-all -Wstack-protector -Wall -Wextra -pedantic   
+ 
+echo -en "\e[0;33mCC \e[0m";
+gcc -c src/args.c -o lib/args.o -g3 -DDEBUG=1 -O3 -std=gnu99  -fstack-protector-all -Wstack-protector -Wall -Wextra -pedantic   
+echo -en "\e[0;33mLD \e[0m";
+gcc -o bin/wordleSolver lib/main.o lib/messages.o lib/args.o -g3 -DDEBUG=1 -O3 -std=gnu99  -fstack-protector-all -Wstack-protector -Wall -Wextra -pedantic   
+echo -en "\n--\nBinary file placed at" \
+		  "\e[0;33mbin/wordleSolver\e[0m\n";
+make: Leaving directory '/home/asabs18/projects/wordleSolver'
+ 

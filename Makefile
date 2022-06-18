@@ -72,8 +72,10 @@ STACK := -fstack-protector-all -Wstack-protector
 # Specifies to GCC the required warnings
 WARNS := -Wall -Wextra -pedantic # -pedantic warns on language standards
 
+INCLUDES := #-Irepos/ut_hash
+
 # Flags for compiling
-CFLAGS := -O3 $(STD) $(STACK) $(WARNS)
+CFLAGS := -O3 $(STD) $(STACK) $(WARNS) $(INCLUDES)
 
 # Debug options
 DEBUG := -g3 -DDEBUG=1
@@ -154,7 +156,8 @@ valgrind:
 # Compile tests and run the test binary
 tests:
 	@echo -en "$(BROWN)CC $(END_COLOR)";
-	$(CC) $(TESTDIR)/main.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
+	# $(CC) $(TESTDIR)/main.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
+	$(CC) $(TESTDIR)/*.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
 	@which ldconfig && ldconfig -C /tmp/ld.so.cache || true # caching the library linking
 	@echo -en "$(BROWN) Running tests: $(END_COLOR)";
 	./$(BINDIR)/$(TEST_BINARY)

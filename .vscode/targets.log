@@ -1,0 +1,419 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat Jun 18 12:03:38 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+WSLENV = ELECTRON_RUN_AS_NODE/w:
+# default
+.SHELLFLAGS := -c
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 70)
+STACK := -fstack-protector-all -Wstack-protector
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 75)
+INCLUDES := 
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /home/asabs18/projects/wordleSolver
+# makefile (from 'Makefile', line 34)
+SHELL := bash
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+# environment
+_ = /mnt/c/Users/aidan/AppData/Local/Programs/Microsoft VS Code/bin/code
+# makefile (from 'Makefile', line 78)
+CFLAGS := -O3 -std=gnu99  -fstack-protector-all -Wstack-protector -Wall -Wextra -pedantic  
+# makefile (from 'Makefile', line 45)
+BLUE = \$(COLOR_PREFIX)[1;34m
+# makefile (from 'Makefile', line 73)
+WARNS := -Wall -Wextra -pedantic 
+# makefile (from 'project.conf', line 1)
+MAKEFILE_LIST :=  Makefile project.conf
+# makefile (from 'Makefile', line 55)
+TESTDIR := test
+# makefile (from 'Makefile', line 81)
+DEBUG := -g3 -DDEBUG=1
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 97)
+NAMES := main messages args
+# makefile (from 'Makefile', line 44)
+BROWN = \$(COLOR_PREFIX)[0;33m
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /mnt/c/Users/aidan/AppData/Local/Programs/Microsoft VS Code
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/asabs18/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.2.8-hotspot/bin:/mnt/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/TortoiseGit/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/aidan/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/aidan/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/aidan/.dotnet/tools:/mnt/c/Users/aidan/AppData/Local/GitHubDesktop/bin:/snap/bin
+# makefile (from 'Makefile', line 92)
+TEST_BINARY := wordleSolver_test_runner
+# makefile (from 'Makefile', line 53)
+LOGDIR := log
+# environment
+VSCODE_LOG_STACK = false
+# makefile (from 'Makefile', line 87)
+TEST_LIBS := -l cmocka -L /usr/lib
+# environment
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-995affda-dd40-4693-90fd-0ea1dd838992.sock
+# makefile (from 'Makefile', line 46)
+END_COLOR = \$(COLOR_PREFIX)[0m
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# makefile (from 'Makefile', line 52)
+SRCDIR := src
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/asabs18/projects/wordleSolver
+# default
+.LOADED := 
+# environment
+WSL_INTEROP = /run/WSL/9_interop
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/asabs18
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# makefile (from 'project.conf', line 17)
+BINARY := wordleSolver
+# environment
+LOGNAME = asabs18
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'project.conf', line 23)
+PROJECT_PATH := ~/projects/wordleSolver
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 51)
+BINDIR := bin
+# makefile (from 'Makefile', line 63)
+CC := gcc
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = asabs18
+# makefile
+.DEFAULT_GOAL := default
+# environment
+NAME = Code
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/aidan/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+# default
+MAKE_COMMAND := make
+# makefile (from 'Makefile', line 67)
+STD := -std=gnu99 
+# makefile (from 'Makefile', line 54)
+LIBDIR := lib
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile (from 'Makefile', line 31)
+OS := Linux
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 59)
+SRCEXT := c
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'project.conf', line 11)
+PROJECT_NAME := wordleSolver
+# environment
+LC_ALL = C
+# environment
+HOSTTYPE = x86_64
+# makefile (from 'Makefile', line 84)
+LIBS := 
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# makefile (from 'Makefile', line 37)
+COLOR_PREFIX := e
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 98)
+OBJECTS := lib/main.o lib/messages.o lib/args.o
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# environment
+WSL_DISTRO_NAME = Ubuntu
+# environment
+MOTD_SHOWN = update-motd
+# variable set hash-table stats:
+# Load=95/1024=9%, Rehash=0, Collisions=5/163=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2064, inode 43625): 15 files, no impossibilities.
+# src (device 2064, inode 43682): 8 files, no impossibilities.
+
+# 23 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+lib/%.o: src/%.c
+#  recipe to execute (from 'Makefile', line 141):
+	@echo -en "$(BROWN)CC $(END_COLOR)";
+	$(CC) -c $^ -o $@ $(DEBUG) $(CFLAGS) $(LIBS)
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+lib/args.o: src/args.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'args'
+#  Last modified 2022-06-02 15:46:20.0607979
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 141):
+	@echo -en "$(BROWN)CC $(END_COLOR)";
+	$(CC) -c $^ -o $@ $(DEBUG) $(CFLAGS) $(LIBS)
+
+all: lib/main.o lib/messages.o lib/args.o
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := lib/main.o lib/messages.o lib/args.o
+# automatic
+# | := 
+# automatic
+# < := lib/main.o
+# automatic
+# ^ := lib/main.o lib/messages.o lib/args.o
+# automatic
+# ? := lib/main.o lib/messages.o lib/args.o
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/28=11%
+#  recipe to execute (from 'Makefile', line 133):
+	@echo -en "$(BROWN)LD $(END_COLOR)";
+	$(CC) -o $(BINDIR)/$(BINARY) $+ $(DEBUG) $(CFLAGS) $(LIBS)
+	@echo -en "\n--\nBinary file placed at" \
+			  "$(BROWN)$(BINDIR)/$(BINARY)$(END_COLOR)\n";
+
+tests:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 158):
+	@echo -en "$(BROWN)CC $(END_COLOR)";
+	# $(CC) $(TESTDIR)/main.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
+	$(CC) $(TESTDIR)/*.c -o $(BINDIR)/$(TEST_BINARY) $(DEBUG) $(CFLAGS) $(LIBS) $(TEST_LIBS)
+	@which ldconfig && ldconfig -C /tmp/ld.so.cache || true # caching the library linking
+	@echo -en "$(BROWN) Running tests: $(END_COLOR)";
+ 
+	./$(BINDIR)/$(TEST_BINARY)
+
+lib/main.o: src/main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-06-02 15:46:19.9907979
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 141):
+	@echo -en "$(BROWN)CC $(END_COLOR)";
+	$(CC) -c $^ -o $@ $(DEBUG) $(CFLAGS) $(LIBS)
+
+# Not a target:
+src/messages.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-02 15:12:38.0575799
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-08 18:12:09.4973977
+#  File has been updated.
+#  Successfully updated.
+
+start:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 121):
+	@echo "Creating project: $(PROJECT_NAME)"
+	@mkdir -pv $(PROJECT_PATH)
+	@echo "Copying files from template to new directory:"
+	@cp -rvf ./* $(PROJECT_PATH)/
+	@echo
+	@echo "Go to $(PROJECT_PATH) and compile your project: make"
+	@echo "Then execute it: bin/$(BINARY) --help"
+	@echo "Happy hacking o/"
+
+# Not a target:
+src/args.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-02 15:12:38.0565833
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+project.conf:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-02 15:15:41.6243336
+#  File has been updated.
+#  Successfully updated.
+
+help:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 109):
+	@echo "C Project Template"
+	@echo
+	@echo "Target rules:"
+	@echo "    all      - Compiles and generates binary file"
+	@echo "    tests    - Compiles with cmocka and run tests binary file"
+	@echo "    start    - Starts a new project using C project template"
+	@echo "    valgrind - Runs binary file using valgrind tool"
+	@echo "    clean    - Clean the project by removing binaries"
+	@echo "    help     - Prints a help message with target rules"
+
+default: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-02 15:12:38.0575799
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 168):
+	@rm -rvf $(BINDIR)/* $(LIBDIR)/* $(LOGDIR)/*;
+
+valgrind:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 147):
+	valgrind \
+		--track-origins=yes \
+		--leak-check=full \
+		--leak-resolution=high \
+		--log-file=$(LOGDIR)/$@.log \
+		$(BINDIR)/$(BINARY)
+	@echo -en "\nCheck the log file: $(LOGDIR)/$@.log\n"
+
+lib/messages.o: src/messages.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'messages'
+#  Last modified 2022-06-02 15:46:20.0307979
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 141):
+	@echo -en "$(BROWN)CC $(END_COLOR)";
+	$(CC) -c $^ -o $@ $(DEBUG) $(CFLAGS) $(LIBS)
+
+# files hash-table stats:
+# Load=17/1024=2%, Rehash=0, Collisions=0/43=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 43 / storage = 352 B / avg = 8 B
+# current buf: size = 8162 B / used = 352 B / count = 43 / avg = 8 B
+
+# strcache performance: lookups = 65 / hit rate = 33%
+# hash-table stats:
+# Load=43/8192=1%, Rehash=0, Collisions=2/65=3%
+# Finished Make data base on Sat Jun 18 12:03:38 2022
+
+ 
